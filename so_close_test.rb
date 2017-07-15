@@ -61,7 +61,21 @@ class So_close_test < Minitest::Test
     	winner = ["123456", "556789","456974"]
     	assert_equal(["556789"], grandbash(ticket,winner))
     end	
-end
+
+    def test_8_digit_number_match
+    	ticket = "12345678"
+    	winner = ["12345678", "78945612", "45698712"]
+    	assert_equal(["12345678"], grandbash(ticket,winner))
+    end
+
+    def test_8_digit_num_off_1
+    	ticket = "98765432"
+    	winner = ["98765431", "12345678", "45632178"]
+    	assert_equal(["98765431"], grandbash(ticket,winner))
+    end	
+end    	
+
+
 
 
 
