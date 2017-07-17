@@ -79,6 +79,12 @@ class So_close_test < Minitest::Test
     	tcard = "1225"
     	assert_equal(3, whats_on(ycard, tcard))
     end
+
+    def test_whats_on_2	
+    	ycard = "them"
+    	tcard = "they"
+    	assert_equal(3, whats_on(ycard, tcard))
+    end
 end    	
 
 
