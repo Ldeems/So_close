@@ -28,11 +28,11 @@ def one_off?(ticket,winner)
             one_off_counter = 0
             
             winner_arr = win.chars
-
+            #p "#{winner_arr} chars is here"
             index_counter = 0
 
                 winner_arr.each do |num|
-                
+                #p "#{num} num is here"
                     unless num == ticket_arr[index_counter]
                     one_off_counter += 1
                     end
@@ -50,8 +50,17 @@ one_off_arr
 end
 
 
+def whats_on(ycard, tcard)
+	c = 0
+	m = 0
 
-
+	tcard.length.times do |x|
+		if tcard[x] == ycard[x]
+			m += 1 
+		end
+	end
+	m	
+end
 
 
 

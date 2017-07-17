@@ -73,6 +73,12 @@ class So_close_test < Minitest::Test
     	winner = ["98765431", "12345678", "45632178"]
     	assert_equal(["98765431"], grandbash(ticket,winner))
     end	
+
+    def test_whats_on	
+    	ycard = "1223"
+    	tcard = "1225"
+    	assert_equal(3, whats_on(ycard, tcard))
+    end
 end    	
 
 
